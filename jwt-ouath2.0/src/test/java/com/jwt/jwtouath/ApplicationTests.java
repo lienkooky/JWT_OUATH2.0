@@ -1,4 +1,4 @@
-package com.jwt.jwtouath20;
+package com.jwt.jwtouath;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
