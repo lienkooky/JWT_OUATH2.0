@@ -10,27 +10,18 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/loginDB?serverTimezone=Asia/Seoul
-    username: user
+    url: jdbc:mysql://localhost:3306/loginDB?serverTimezone=UTC&characterEncoding=UTF-8
+    username: jwt
     password: 1234
 
   jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    open-in-view: false
     hibernate:
       ddl-auto: create #create update none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     show-sql: true
     
-springdoc:
-  default-consumes-media-type: application/json;charset=UTF-8
-  default-produces-media-type: application/json;charset=UTF-8
-  paths-to-match: /**
-  swagger-ui:
-    path: /
-    display-request-duration: true
-    groups-order: desc
-    operations-sorter: alpha
-    disable-swagger-default-url: true
-  api-docs:
-    groups:
-      enabled: true

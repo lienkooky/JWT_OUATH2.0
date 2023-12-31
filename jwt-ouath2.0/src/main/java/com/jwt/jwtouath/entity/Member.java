@@ -11,6 +11,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+
 import com.jwt.jwtouath.common.MemberType;
 import com.jwt.jwtouath.dto.member.requset.MemberUpdateRequest;
 import com.jwt.jwtouath.dto.sign_up.request.SignUpRequest;
@@ -25,7 +26,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @Getter
-@Entity
+@Entity(name = "MEMBER")
 public class Member {
 	
 	@Column(nullable = false, unique = true)
